@@ -1,0 +1,117 @@
+<div class="daili_left">
+	<a href="gh_zhongxin.html">
+	<div class="dl_title">
+		<img src="img/gonghuo/gonghuo_zhongxin.png">供货商中心
+	</div>
+</a>
+	<ul style="padding-bottom: 5rem;">
+		<li>
+			<div class="left_title">
+				<div class="left-icon">
+					<img src="img/gonghuo/gonghuo_guanli.png" class="yincang"><img src="img/gonghuo/ongonghuo_guanli.png" class="xianshi">
+				</div>
+				供货商管理
+			</div>
+			<ul class="yi">
+				<a href="gh_shenqing.html" class="style_hui_14">
+					<li id="gh_shenqing">申请供货商</li>
+				</a>
+
+				<a href="gh_shezhi.html" class="style_hui_14">
+					<li id="gh_shezhi">发货设置</li>
+				</a>
+		   <a href="gh_kuaidi.html" class="style_hui_14">
+					<li id="gh_kuaidi">快递模板</li>
+				</a>
+				<a href="gh_fabu.html" class="style_hui_14">
+					<li id="gh_fabu">发布商品</li>
+				</a>
+				<a href="gh_shangpin.html" class="style_hui_14">
+					<li id="gh_shangpin">商品管理</li>
+				</a>
+			</ul>
+		</li>
+
+		<li>
+			<div class="left_title">
+				<div class="left-icon">
+					<img src="img/gonghuo/dingdan.png" class="yincang"><img src="img/gonghuo/ondingdan.png" class="xianshi">
+				</div>
+				订单管理
+			</div>
+			<ul class="yi">
+
+				<a href="gh_baoguo.html" class="style_hui_14">
+					<li id='gh_baoguo'>包裹列表</li>
+				</a>
+
+				<a href="gh_dingdan.html" class="style_hui_14">
+					<li id='gh_dingdan'>订单管理</li>
+				</a>
+
+			</ul>
+		</li>
+
+		<li>
+			<div class="left_title">
+				<div class="left-icon">
+					<img src="img/gonghuo/zhanghao_guanli.png" class="yincang"><img src="img/gonghuo/onzhanghao_guanli.png" class="xianshi">
+				</div>
+				账号管理
+			</div>
+			<ul class="yi">
+				<a href="gh_ziliao.html" class="style_hui_14">
+					<li id='gh_ziliao'>账户资料</li>
+				</a>
+
+				<a href="gh_liushui.html" class="style_hui_14">
+					<li id="gh_liushui">流水明细</li>
+				</a>
+
+				<a href="gh_tixian.html" class="style_hui_14">
+					<li id="gh_tixian">账号提现</li>
+				</a>
+
+			</ul>
+		</li>
+
+
+	</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$('.yi li').click(function() {
+		$('.yi li').removeClass('li_active')
+		$('.left_title').removeClass('ul_active')
+		$(this).addClass('li_active')
+		$('.xianshi').hide()
+		$('.yincang').show()
+		$(this).parents('li').find('.yincang').hide()
+		$(this).parents('li').find('.xianshi').show()
+		$(this).parents('li').find('.left_title').addClass('ul_active')
+	})
+
+
+	$(document).ready(function() {
+
+
+		var url = String(window.location)
+		var rightid = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.'));
+		console.log(rightid)
+		$('#' + rightid).addClass('li_active')
+		$('#' + rightid).parents('li').find('.left_title').addClass('ul_active')
+		$('#' + rightid).parents('li').find('.yincang').hide()
+		$('#' + rightid).parents('li').find('.xianshi').show()
+
+
+	});
+</script>

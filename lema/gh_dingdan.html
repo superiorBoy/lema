@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_dingdan.png">订单管理
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="huiyuan_content_title">
+						<span class="huiyuan_content_title_active" value="1">全部</span><span value="2">待付款</span><span value="3">待发货</span>
+						<span value="4">已发货</span><span value="5">发货完成</span>
+						
+					</div>
+
+					<div class="  dd">
+						<div class="dd_top">
+							<div class="chaxun_list">
+							<span>订单编号：</span> <input type="text" name="name" id="name" value="" />
+							</div>
+							<div class="chaxun_list">
+							<span>订单状态：</span> 		
+											<div class="dd_zhuangtai top_sel">
+							<div class="filter-text">
+								<input class="filter-title" type="text" readonly placeholder="选择状态" />
+								<i class="icon icon-filter-arrow"></i>
+							</div>
+							<select name="filter">
+								<option value="1">全部</option>
+								<option value="2">待付款</option>
+								<option value="3">待发货</option>
+								<option value="4">已发货</option>
+								<option value="4">发货完成</option>
+								
+							</select>
+						</div>
+							</div>
+							<div class="chaxun_list">
+							<span>会员账号：</span> <input type="text" name="name" id="name" value="" />
+							</div>
+							
+						</div>
+						
+					<div class="dd_bottom">
+						
+				
+						
+						<div class="dd_time">
+							<span>出库时间：</span>
+							<div class="rili">
+								<img src="img/gonghuo/rili.png" >
+						
+							<input type="text" class="demo-input"  placeholder="&nbsp; 开始时间  &nbsp; ~  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  结束时间"
+							 id="riqi" name='riqi'>
+							 	</div>
+						</div>
+
+						<div class="chaxun_anniu style_bai_14 gh_dd_chaxun" onclick="chaxun()">查询</div>
+						
+							</div>
+					</div>
+
+
+					<div class="tab_caozuo ">
+						<div style="float:left;  margin-right:1rem;display: flex;align-items: center;" class="table_quanxuan">
+							<input type="checkbox" name="quanxuan" id="quanxuan" style="width:14px; height:14px;"> 全选
+						</div>
+						<div class="filter-box ">
+							<div class="filter-text">
+								<input class="filter-title" type="text" readonly placeholder="操作方式" />
+								<i class="icon icon-filter-arrow"></i>
+							</div>
+							<select name="filter">
+								<option value="1">操作1</option>
+								<option value="2">操作2</option>
+								<option value="3">操作3</option>
+
+							</select>
+						</div>
+						<input type="submit" name="Submit2" value="确定操作" class="queding style_bai_14" >
+					</div>
+
+
+					<!--------列表开始-------->
+
+					<table width="100%" align="center" ; class="tab_top baoguo " border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA;">
+							<td height="40" align="center" class="" width="60px">选择 </td>
+							<td height="40" align="left" class="" width="90px">导入方式 </td>
+							<td align="left" class="" width="130px">交易时间</td>
+							<td align="center" class=""width="80px">包裹数</td>
+							<td align="left" class="" width="130">出货时间</td>
+							<td align="left" class=""width="90px">总费用</td>
+							<td align="center" class="" width="110px">店铺发货</td>
+							<td align="center" class="" width="110px">订单状态</td>
+							<td align="center" class="" width="110px">操作</td>
+						</tr>
+
+
+						<tr align="center">
+							<td align=""height="40" class=""><input type="checkbox" name="check" id="id_" class="tab_xuanze" value="1" style="width:14px; height:14px;"></td>
+							<td align="left" class="">批量导入</td>
+							<td align="left" class="style_hui_14">2020/06/02 15:21:42</td>
+							<td align="center" class="">1</td>
+							<td align="left" class="style_hui_14">2020/06/02 15:21:42</td>
+							<td align="left" class="">4.50</td>
+	                        <td align="center" class="">待发</td>
+							<td align="center" class="style_hong_14">待发货</td>
+							<td align="center" class="dd_caozuo "><span class="dd_zhifu">立即支付</span><span class="dd_chaxiao">撤销订单</span></td>
+
+						</tr>
+
+					</table>
+
+
+					<!--------分页列表开始-------->
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="p_pagelan">
+						<tbody>
+							<tr>
+								<td class="">
+									<ul class="pagination">
+										<li class="disabled"><span>«</span></li>
+										<li class="active"><span>1</span></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">2</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=3">3</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=4">4</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">»</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		<!-- <script src="js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+			$('.huiyuan_content_title span').click(function() {
+				$(this).addClass('huiyuan_content_title_active').siblings().removeClass('huiyuan_content_title_active')
+				
+			})
+
+
+			laydate.render({
+				elem: '#riqi',
+				range: true
+			});
+			$('.filter-box').selectFilter({
+				callBack: function(val) {
+					//返回选择的值
+					console.log(val + '-是返回的值')
+				}
+			});
+			$('.dd_zhuangtai').selectFilter({
+				callBack: function(val) {
+					//返回选择的值
+					console.log(val + '-是返回的值')
+				}
+			});
+			function chaxun(){
+				
+				var pingtai=$("input[name='pingtai']").val()
+				var disanfang=$("input[name='disanfang']").val()
+				var kuaidi=$("input[name='kuaidi']").val()
+				var shijian= $("input[name='riqi']").val()
+				
+				console.log(shijian)
+			}
+			$('.queding').click(function(){
+				
+				var str = [];
+				$("input[name='check']:checked").each(function (index, item) {
+				    str.push($(this).val())
+				});
+				
+				console.log(str)
+			})
+		</script>
+
+
+		<script type="text/javascript">
+			$('#quanxuan').click(function() {
+				var flag = $(this).is(":checked");
+				console.log(flag)
+				$(":checkbox[name='check']").prop("checked", flag);
+			})
+			$('.tab_xuanze').click(function() {
+				var flag = true;
+				var tbodyO = $('.tab_xuanze')
+
+				for (var j = 0; j < tbodyO.length; j++) {
+					//只要存在没被勾选的复选框
+					if (!tbodyO[j].checked) {
+						//判断标识为假，不影响全选框
+						flag = false;
+						break;
+					}
+				}
+				$('#quanxuan').prop("checked", flag)
+			})
+		</script>
+	</body>
+</html>

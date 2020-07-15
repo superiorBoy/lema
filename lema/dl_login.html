@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/daili.css"/>
+		<link rel="stylesheet" type="text/css" href="css/lema.css"/>
+	</head>
+	<body>
+<div id="top"></div>
+
+		<div class="login_bannner_img">
+			
+			<div class="login_center content">
+				
+				<div class="login_center_ding ">
+					
+			
+						<p class="login_center_login_txt">代理登录</p>
+			
+						<div class="login_phone">
+							<img src="img/dl_yonghu.png"> <input type="" id="" value="" placeholder="请输入手机号码" name="phone" />
+						</div>
+						<div class="login_mima">
+							<img src="img/dl_mima.png"> <input type="" id="" value="" placeholder="请输入密码" name='password' />
+						</div>
+			
+						<div class="xuanze zidong_login">
+							<div class="checkbox">
+								<input id="bt_c2" name="checkbox" type="checkbox" checked="checked">
+								<label for="bt_c2"></label>
+								自动登录
+							</div>
+							
+						</div>
+						<button type="button" onclick="login()">登录</button>
+						<p class="go_zhuce">该没有账号？<a href="dl_zhuce.html"><span>免费注册 <img src="img/go.jpg"></span></p></a>
+			
+					
+				</div>
+			
+			</div>
+			
+			
+			
+		</div>
+		
+		
+
+		
+		<div class="foot"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script type="text/javascript">
+			$('#top').load('top.html')
+			$(".foot").load('footer.html')
+	
+	
+	function login(){
+		
+		var phone = $("input[name='phone']").val()
+		var password = $("input[name='password']").val()
+		console.log($("input[type='checkbox']").is(":checked"))
+		console.log(phone, password)
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+		</script>
+	</body>
+</html>

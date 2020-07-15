@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_tixian.png">账户提现
+				</div>
+
+				<div class="bottom">
+
+
+<div class="tixian_top">
+	<p>用户姓名：<span>张三</span></p>
+	<p>当前余额：<span class="style_hong_18_bold">111.00元</span></p>
+	<p>提现金额：<input type="number" name="jine" id="" value="" /></p>
+	<p>到账账户：<input type="text" name="zhanghu" id="" value="" /></p>
+	<button type="button" onclick="tixian()">确认提现</button>
+</div>
+	
+
+
+					<!--------列表开始-------->
+
+					<table width="100%" align="center" ; class="tab_top" border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA;">
+							
+							<td align="left" class="" width="60px">排序</td>
+							<td align="left" class="" width="160px">申请时间</td>
+							<td align="left" class="">金额</td>
+							<td align="center" class="">到账方式</td>
+							<td align="left" class="">到账账户</td>
+							<td align="left" class=""width="200px">备注</td>
+                            <td align="center" class="">申请状态</td>
+						</tr>
+
+
+						<tr align="center">
+							
+							<td align="left" class="">1</td>
+							<td align="left" class="style_hui_14">2020-05-19 17:005:40</td>
+							<td align="left" class="">50.00</td>
+							<td align="center" class="">支付宝</td>
+							<td align="left" class="">13122223333</td>
+							<td align="left" class="">提现到账50.00元</td>
+                            <td align="center" class="">驳回</td>
+
+						</tr>
+
+					</table>
+
+
+					<!--------分页列表开始-------->
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="p_pagelan">
+						<tbody>
+							<tr>
+								<td class="">
+									<ul class="pagination">
+										<li class="disabled"><span>«</span></li>
+										<li class="active"><span>1</span></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">2</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=3">3</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=4">4</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">»</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+				$('#top').load('gh_top.html')
+				$('#left').load('gh_left.html')
+				$(".foot").load('footer.html')
+
+
+function tixian(){
+	
+	var jine=$('input[name="jine"]').val()
+	var zhanghu=$('input[name="zhanghu"]').val()
+	
+}
+
+
+			
+
+			
+		</script>
+
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+    vertical-align: baseline;
+}
+html,body{
+    
+    
+    font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+#app{
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+/*头部head*/
+.app_head{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: #ffffff;
+    
+    
+    
+}
+
+.style_bai_10 {font-size: 10px; color: #ffffff}
+.style_bai_11 {font-size: 11px; color: #ffffff}
+.style_bai_12 {font-size: 12px; color: #ffffff}
+.style_bai_13 {font-size: 13px; color: #ffffff}
+.style_bai_14{font-size: 14px; color: #ffffff;}
+.style_bai_15 {font-size: 15px; color: #ffffff;}
+.style_bai_16 {font-size: 16px; color: #ffffff;}
+.style_bai_17 {font-size: 17px; color: #ffffff;}
+.style_bai_18 {font-size: 18px; color: #ffffff;}
+.style_bai_10_bold {font-size: 10px; color: #ffffff; font-weight: bold}
+.style_bai_11_bold {font-size: 11px; color: #ffffff; font-weight: bold}
+.style_bai_12_bold {font-size: 12px; color: #ffffff; font-weight: bold}
+.style_bai_13_bold {font-size: 13px; color: #ffffff; font-weight: bold}
+.style_bai_14_bold {font-size: 14px; color: #ffffff; font-weight: bold}
+.style_bai_15_bold {font-size: 15px; color: #ffffff; font-weight: bold}
+.style_bai_16_bold {font-size: 16px; color: #ffffff; font-weight: bold}
+
+.style_hei_10 {font-size: 10px; color: #333333}
+.style_hei_11 {font-size: 11px; color: #333333}
+.style_hei_12 {font-size: 12px; color: #333333}
+.style_hei_13 {font-size: 13px; color: #333333}
+.style_hei_14{font-size: 14px; color: #333333;}
+.style_hei_15 {font-size: 15px; color: #333333;}
+.style_hei_16 {font-size: 16px; color: #333333;}
+.style_hei_17 {font-size: 17px; color: #333333;}
+.style_hei_18 {font-size: 18px; color: #333333;}
+.style_hei_20 {font-size: 20px; color: #333333;}
+.style_hei_10_bold {font-size: 10px; color: #333333; font-weight: bold}
+.style_hei_11_bold {font-size: 11px; color: #333333; font-weight: bold}
+.style_hei_12_bold {font-size: 12px; color: #333333; font-weight: bold}
+.style_hei_13_bold {font-size: 13px; color: #333333; font-weight: bold}
+.style_hei_14_bold {font-size: 14px; color: #333333; font-weight: bold}
+.style_hei_15_bold {font-size: 15px; color: #333333; font-weight: bold}
+.style_hei_16_bold {font-size: 16px; color: #333333; font-weight: bold}
+
+
+
+.style_hui_10 {font-size: 10px; color: #777777}
+.style_hui_11 {font-size: 11px; color: #777777}
+.style_hui_12 {font-size: 12px; color: #777777}
+.style_hui_13 {font-size: 13px; color: #777777}
+.style_hui_14{font-size: 14px; color: #777777;}
+.style_hui_15 {font-size: 15px; color: #777777;}
+.style_hui_16 {font-size: 16px; color: #777777;}
+.style_hui_17 {font-size: 17px; color: #777777;}
+.style_hui_18 {font-size: 18px; color: #777777;}
+.style_hui_10_bold {font-size: 10px; color: #777777; font-weight: bold}
+.style_hui_11_bold {font-size: 11px; color: #777777; font-weight: bold}
+.style_hui_12_bold {font-size: 12px; color: #777777; font-weight: bold}
+.style_hui_13_bold {font-size: 13px; color: #777777; font-weight: bold}
+.style_hui_14_bold {font-size: 14px; color: #777777; font-weight: bold}
+.style_hui_15_bold {font-size: 15px; color: #777777; font-weight: bold}
+.style_hui_16_bold {font-size: 16px; color: #777777; font-weight: bold}
+
+
+.style_hong_10 {font-size: 10px; color: #fd386c}
+.style_hong_11 {font-size: 11px; color: #fd386c}
+.style_hong_12 {font-size: 12px; color: #fd386c}
+.style_hong_13 {font-size: 13px; color: #fd386c}
+.style_hong_14{font-size: 14px; color: #fd386c;}
+.style_hong_15 {font-size: 15px; color: #fd386c;}
+.style_hong_16 {font-size: 16px; color: #fd386c;}
+.style_hong_17 {font-size: 17px; color: #fd386c;}
+.style_hong_18 {font-size: 18px; color: #fd386c;}
+.style_hong_20 {font-size: 20px; color: #fd386c;}
+.style_hong_10_bold {font-size: 10px; color: #fd386c; font-weight: bold}
+.style_hong_11_bold {font-size: 11px; color: #fd386c; font-weight: bold}
+.style_hong_12_bold {font-size: 12px; color: #fd386c; font-weight: bold}
+.style_hong_13_bold {font-size: 13px; color: #fd386c; font-weight: bold}
+.style_hong_14_bold {font-size: 14px; color: #fd386c; font-weight: bold}
+.style_hong_15_bold {font-size: 15px; color: #fd386c; font-weight: bold}
+.style_hong_16_bold {font-size: 16px; color: #fd386c; font-weight: bold}
+.style_hong_18_bold {font-size: 18px; color: #fd386c; font-weight: bold}
+
+
+.style_lv_10 {font-size: 10px; color: #13c2c2}
+.style_lv_11 {font-size: 11px; color: #13c2c2}
+.style_lv_12 {font-size: 12px; color: #13c2c2}
+.style_lv_13 {font-size: 13px; color: #13c2c2}
+.style_lv_14{font-size: 14px; color: #13c2c2;}
+.style_lv_15 {font-size: 15px; color: #13c2c2;}
+.style_lv_16 {font-size: 16px; color: #13c2c2;}
+.style_lv_17 {font-size: 17px; color: #13c2c2;}
+.style_lv_18 {font-size: 18px; color: #13c2c2;}
+.style_lv_10_bold {font-size: 10px; color: #13c2c2; font-weight: bold}
+.style_lv_11_bold {font-size: 11px; color: #13c2c2; font-weight: bold}
+.style_lv_12_bold {font-size: 12px; color: #13c2c2; font-weight: bold}
+.style_lv_13_bold {font-size: 13px; color: #13c2c2; font-weight: bold}
+.style_lv_14_bold {font-size: 14px; color: #13c2c2; font-weight: bold}
+.style_lv_15_bold {font-size: 15px; color: #13c2c2; font-weight: bold}
+.style_lv_16_bold {font-size: 16px; color: #13c2c2; font-weight: bold}
+
+
+
+
+
+
+

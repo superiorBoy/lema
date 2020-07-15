@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{$pagetitle['titlepage']}</title>
+		<meta name="keyword" content="{$pagetitle['keyword']}" />
+		<meta name="description" content="{$pagetitle['explain']}" />
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+		<style type="text/css">
+			.huiyuan_tab {
+				margin-bottom: 110px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			{include file="top" /}
+		</div>
+
+
+		<div class="body content">
+			<div id="left">
+				{include file="gh_left" /}
+			</div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_dayin.png">打印尺寸管理
+				</div>
+
+				<div class="bottom add_chicun">
+					<div class="fenzhan add_chicun">
+						<p class="add_chicun_title"><span></span>新增</p>
+						<div class="fenzhan_list ">
+							<p><span>面单名称：</span><input type="text" name="mingcheng" id="" value="" /></p>
+
+						</div>
+
+						<div class="dayin_xuan_leixing">
+							<p class="dayin_xuan_title">选择面单类型 ：</p>
+							<div class="dayin_xuan_leixing_list">
+								<p><input type="radio" name="dayin_leiixng" id="" value="1" />淘宝菜鸟面单</p>
+								<p><input type="radio" name="dayin_leiixng" id="" value="2" />拼多多电子单</p>
+								<p><input type="radio" name="dayin_leiixng" id="" value="3" />京东无界面单</p>
+
+							</div>
+						</div>
+						<div class="dayin_xuan_yangshi">
+							<p class="dayin_xuan_title">选择面单样式 ：</p>
+							<div class="dayin_xuan_yangshi_list">
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="1" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="2" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="3" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="4" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="5" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+								<div class="dayin_xuan_yangshi_item">
+									<p class="dayin_xuan_yangshi_item_top"><input type="radio" name="xuanyangshi" id="" value="6" />申通快递(100*180)</p>
+									<img src="img/gonghuo/dayin_miandan.png">
+								</div>
+							</div>
+						</div>
+
+						<div class="fenzhan_list ">
+							<p><span>开始码：</span><input type="text" name="kaishi" id="" value="" /></p>
+
+						</div>
+						<div class="fenzhan_list ">
+
+							<p class=""><span>结束码：</span><input type="text" name="jieshu" id="" value="" placeholder="">
+							</p>
+						</div>
+						<div class="dayin_moren ">
+							<span>设为默认：</span>
+							<p class=""><input type="radio" name="dayin_moren" id="" value="1" />是</p>
+							<p class=""><input type="radio" name="dayin_moren" id="" value="2" />否</p>
+						</div>
+
+						<button type="button" class="fenzhan_shenqing fahuo_shezhi" onclick="tijiao()">保存</button>
+
+					</div>
+
+
+				</div>
+
+				<p class="dayin_xuxian"> </p>
+				<table width="100%" align="center" ; class="tab_top huiyuan_tab " border="0" cellspacing="0" cellpadding="0">
+					<tr style="background-color: #FAFAFA;" align="left">
+
+						<td align="center" class="">面单名称</td>
+						<td align="" class="">面单类型</td>
+						<td align="" class="">面单样式</td>
+						<td align="" class="">开始码</td>
+						<td align="" class="">结束码</td>
+						<td align="center" class="">是否默认</td>
+						<td align="center" class="">操作</td>
+					</tr>
+					<tr align="left">
+						<td align="center" class="">面单1</td>
+						<td align="" class="">淘宝菜鸟面单</td>
+						<td align="" class=""><img src="img/gonghuo/dayin_miandan.png"></td>
+						<td align="" class="">43210</td>
+						<td align="" class="">10000</td>
+						<td align="center" class="">是</td>
+						<td align="center" class="dayin_caozuo"><span class="dayin_xg">修改</span>&ensp; <span class="dayin_del">删除</span>&ensp;
+							<span class="dayin_mr">设为默认</span></td>
+					</tr>
+				</table>
+
+
+			</div>
+		</div>
+
+
+		<div class="foot">
+			{include file="footer" /}
+		</div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			function tijiao() {
+
+				var mingcheng = $("input[name='mingcheng']").val()
+				var leixing = $("input[name='dayin_leiixng']:checked").val()
+				var yangshi = $("input[name='xuanyangshi']:checked").val()
+				var kaishi = $("input[name='kaishi']").val()
+				var jieshu = $("input[name='jieshu']").val()
+				var moren = $("input[name='dayin_moren']:checked").val()
+
+				console.log(moren)
+
+
+			}
+
+
+			$('body').on('click', '.dayin_xuan_yangshi_item', function() {
+				$(this).find("input").prop("checked", true);
+
+			})
+			$('body').on('click', '.dayin_xg', function() {
+
+
+			})
+			$('body').on('click', '.dayin_del', function() {
+
+
+			})
+			$('body').on('click', '.dayin_mr', function() {
+
+
+			})
+		</script>
+
+
+		<script type="text/javascript">
+
+
+		</script>
+	</body>
+</html>

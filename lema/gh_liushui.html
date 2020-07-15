@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_liushui.png">流水明细
+				</div>
+
+				<div class="bottom">
+
+
+
+					<div class="chaxun">
+
+						<div class="chaxun_list">
+							<span>流水类型：</span>
+							<div class="top_sel gh_gongyingshang">
+								<div class="filter-text">
+									<input class="filter-title" type="text" readonly placeholder="选择类型" name="leixing" />
+									<i class="icon icon-filter-arrow"></i>
+								</div>
+								<select name="filter">
+									<option value="1">类型1</option>
+									<option value="2">类型2</option>
+									<option value="3">类型3</option>
+									<option value="4">类型4</option>
+
+
+								</select>
+							</div>
+						</div>
+
+						<span>订单编号：</span> <input type="text" name="bianhao" id="name" value="" />
+						<div class="chaxun_anniu style_bai_14" onclick="chaxun()">查询</div>
+					</div>
+
+
+
+
+					<!--------列表开始-------->
+
+					<table width="100%" align="center" ; class="tab_top " border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA; ">
+							<td align="left" class="" width="60px">排列</td>
+							<td align="left" class="" width="145px">流水编号</td>
+							<td align="left" class="" width="80px">流水类型</td>
+							<td align="left" class="" width="70px">金额</td>
+							<td align="left" class="" width="140px">订单编号</td>
+							<td align="left" class="" width="150px">备注</td>
+							<td align="left" class="" width="160px">创建时间</td>
+
+
+						</tr>
+
+
+						<tr align="center">
+
+							<td align="left" class="">1</td>
+							<td align="left" class="">202006171421451</td>
+							<td align="left" class="">提现</td>
+							<td align="left" class="">50.00</td>
+							<td align="left" class="">3642147515451</td>
+							<td align="left" class="">提现到账户50.00元</td>
+							<td align="left" class=" ">2020-06-17 15:49:43</td>
+
+						</tr>
+
+					</table>
+
+
+					<!--------分页列表开始-------->
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="p_pagelan">
+						<tbody>
+							<tr>
+								<td class="">
+									<ul class="pagination">
+										<li class="disabled"><span>«</span></li>
+										<li class="active"><span>1</span></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">2</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=3">3</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=4">4</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">»</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="foot"></div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+	
+
+			$('.gh_gongyingshang').selectFilter({
+				callBack: function(val) {
+					//返回选择的值
+					console.log(val + '-是返回的值')
+				}
+			});
+
+
+
+			function chaxun() {
+
+				var leixing = $("input[name='leixing']").val()
+				var bianhao = $("input[name='bianhao']").val()
+			}
+
+
+		</script>
+
+
+
+	</body>
+</html>

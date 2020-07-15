@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/daili.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/liebie_jiexi.png">域名解析
+				</div>
+
+				<div class="bottom style_hong_14 jiexi">
+
+          <p class="jiexi_txt">通过cname解析到123456.lemxx.com</p>
+<p>如果您 请将您要绑定的域名 CNAME 解析到 cncms.lemxx.com 解析教程</p>
+	
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		<!-- <script src="js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('top.html')
+			$('#left').load('dl_left.html')
+			$(".foot").load('footer.html')
+
+function upload_zheng() {
+        $(".img_zheng").text('')
+        var files = $('#shenfen_zheng').get(0).files;
+
+        for (var i = 0; i < files.length; i++) {
+            var r = new FileReader();
+            r.onload = function () {
+                var tag = ` <img class='ossimg' src='${this.result}'  alt=''>`
+                $(".img_zheng").append(tag)
+            };
+            r.readAsDataURL(files[i]);
+        }
+        ;
+
+    }
+
+
+
+function shenqing() {
+
+        var yuming = $("input[name='yuming']").val()
+        var beianhao = $("input[name='beianhao']").val()
+        var wangzhan = $("input[name='wangzhan']").val()
+        var biaoti = $("input[name='biaoti']").val()
+		var guanjianzi = $("input[name='guanjianzi']").val()
+        var miaoshu = $("textarea").val()
+        console.log(miaoshu)
+
+
+
+$('.fenzhan').hide()
+$('.shenhe').show()
+$('.dierbu').addClass('shenqing_title_top_active')
+
+$('.dierbu_span').addClass('shenqing_title_top_span')
+
+
+
+
+
+
+    }
+
+
+
+
+$('.leixing p').click(function(){
+	
+	$(this).addClass('leixing_active').siblings().removeClass('leixing_active')
+	
+})
+$('.zhouqi p').click(function(){
+	
+	$(this).addClass('zhouqi_active').siblings().removeClass('zhouqi_active')
+	
+})
+
+
+
+
+
+		</script>
+
+
+		<script type="text/javascript">
+
+		
+		</script>
+	</body>
+</html>

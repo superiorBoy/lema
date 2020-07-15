@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/daili.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/liebie_ziliao.png">我的资料
+				</div>
+
+				<div class="bottom ziliao" >
+
+<p>会&ensp;员&ensp;名：<span>欧阳欧阳</span></p>
+<p>用户等级：<span>普通会员</span><a href="javascript:void(0);" class="style_hong_14">[升级会员]</a></p>
+<p>手机号码：<span>17751241122</span></p>
+<p>姓&ensp;&ensp;&ensp;&ensp;名：<span>17751241122</span></p>	
+<p>昵&ensp;&ensp;&ensp;&ensp;称：<input type="text" maxlength="25" name="nicheng" id="" value="" placeholder="长度不超过25个字符"/></p>
+<p>代&ensp;&ensp;&ensp;&ensp;号：<input type="text" name="daihao" id="" value="客服一号" /></p>
+<p>Q&ensp;&ensp;&ensp;&ensp;&ensp;Q：<input type="number" name="qq" id="" value="" /></p>
+<p>微&ensp;&ensp;&ensp;&ensp;信：<input type="text" name="weixin" id="" value="" /></p>
+<p>电子邮箱：<input type="email" name="youxiang" id="" value="" /></p>
+<button type="button" onclick="baocun()">修改保存</button>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('top.html')
+			$('#left').load('dl_left.html')
+			$(".foot").load('footer.html')
+
+
+function baocun(){
+	
+	var nicheng=$('input[name="nicheng"]').val()
+	var daihao=$('input[name="daihao"]').val()
+	var qq=$('input[name="qq"]').val()
+	var weixin=$('input[name="weixin"]').val()
+	var youxiang=$('input[name="youxiang"]').val()
+	console.log(nicheng,daihao,qq,weixin,youxiang)
+	
+}
+
+			
+
+
+			
+		</script>
+
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

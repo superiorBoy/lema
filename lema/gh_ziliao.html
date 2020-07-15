@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_ziliao.png">账户资料
+				</div>
+
+				<div class="bottom ziliao">
+
+					<p>&ensp;&ensp;审批状态：<span class="style_hong_14">审核失败</span> <span class="ziliao_zhuangtai style_hui_14">提醒：前往 <a
+							 href="" class="style_hong_14"> “供货商管理——>申请供货商” </a>重新提交申请</span></p>
+					<p>&ensp;&ensp;姓&ensp;&ensp;&ensp;&ensp;名：<span>张三</span></p>
+					<p>&ensp;&ensp;联系电话：<span>17751241122</span></p>
+					<p>是否有品牌：<span>是</span></p>
+					<p class="zhengshu">&ensp;&ensp;品牌证书：<img src="img/dingwei1_bg.png"></p>
+					<p>&ensp;&ensp;店铺网址：<span>www.lemainternet.xiaomeidaifa.com </span></p>
+					<p>&ensp;&ensp;发货地址：<span>浙江省杭州市江干区采荷街道五福大厦</span></p>
+					<div class="ziliao_tupian">&ensp;&ensp;商品图片：
+						<div class="ziliao_tupian_arry">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+							<img src="img/daili_tuandui.png">
+
+						</div>
+					</div>
+					<p>&ensp;&ensp;商品价格：<span> 2.50元</span></p>
+					<p>&ensp;&ensp;快递价格：<span>10.00元</span></p>
+					<p>&ensp;&ensp;联系Q Q：<span> 945124001</span></p>
+					<p>&ensp;&ensp;联系微信：<span>15145470010</span></p>
+					<div class="ziliao_youshi">&ensp;&ensp;申请优势：<ul>
+							<li>1，分站平台技术支持，24小时候技术在线维护。</li>
+							<li>2，我们提供稳定，安全，低价的快递费，礼品货源。</li>
+							<li>3，独立域名，独立后台，自由管理。</li>
+							<li>4，前景非常可观，客源稳定，稳定收入。</li>
+							<li>5，分站成本低，可以提供服务器，域名，维护，升级。</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+
+			function baocun() {
+
+				var nicheng = $('input[name="nicheng"]').val()
+				var daihao = $('input[name="daihao"]').val()
+				var qq = $('input[name="qq"]').val()
+				var weixin = $('input[name="weixin"]').val()
+				var youxiang = $('input[name="youxiang"]').val()
+				console.log(nicheng, daihao, qq, weixin, youxiang)
+
+			}
+		</script>
+
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

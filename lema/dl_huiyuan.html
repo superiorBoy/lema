@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/daili.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/liebie_huiyuan.png">会员列表
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="huiyuan_content_title">
+						<span class="huiyuan_content_title_active" value="1">全部</span><span value="2">正常</span><span value="3">停用</span>
+					</div>
+
+					<div class="chaxun">
+						<span>会员名：</span> <input type="text" name="name" id="name" value="" />
+						<div class="chaxun_anniu style_bai_14">查询</div>
+					</div>
+
+
+					<div class="tab_caozuo ">
+						<div style="float:left;  margin-right:1rem;display: flex;align-items: center;" class="table_quanxuan">
+							<input type="checkbox" name="quanxuan" id="quanxuan" style="width:14px; height:14px;"> 全选
+						</div>
+						<div class="filter-box">
+							<div class="filter-text">
+								<input class="filter-title" type="text" readonly placeholder="操作方式" />
+								<i class="icon icon-filter-arrow"></i>
+							</div>
+							<select name="filter">
+								<option value="1">操作1</option>
+								<option value="2">操作2</option>
+								<option value="3">操作3</option>
+
+							</select>
+						</div>
+						<input type="submit" name="Submit2" value="确定操作" class="queding style_bai_14">
+					</div>
+
+
+					<!--------列表开始-------->
+
+					<table width="100%" align="center" ; class="tab_top huiyuan_tab" border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA;">
+							<td height="40" align="center" class="" width="80px">选择 </td>
+							<td align="left" class="" width="60px">排序</td>
+							<td align="left" class="">账号</td>
+							<td align="center" class="">会员名</td>
+							<td align="left" class="">会员等级</td>
+							<td align="left" class="">注册时间</td>
+							<td align="left" class="">操作时间</td>
+							<td align="left" class="" width="50px">状态</td>
+						</tr>
+
+
+						<tr align="center">
+							<td height="40" class=""><input type="checkbox" name="check" id="id_" class="tab_xuanze" value="1" style="width:14px; height:14px;"></td>
+							<td align="left" class="">1</td>
+							<td align="left" class="">13122223333</td>
+							<td align="center" class="">张三</td>
+							<td align="left" class="">普通会员</td>
+							<td align="left" class="style_hui_14">2020-05-19 17:005:40</td>
+							<td align="left" class="style_hui_14">2020-05-19 17:005:40</td>
+							<td align="left" class=" ">正常</td>
+
+						</tr>
+						<tr align="center">
+							<td height="40" class=""><input type="checkbox" name="check" id="id_" class="tab_xuanze" value="1" style="width:14px; height:14px;"></td>
+							<td align="left" class="">1</td>
+							<td align="left" class="">13122223333</td>
+							<td align="center" class="">张三</td>
+							<td align="left" class="">普通会员</td>
+							<td align="left" class="style_hui_14">2020-05-19 17:005:40</td>
+							<td align="left" class="style_hui_14">2020-05-19 17:005:40</td>
+							<td align="left" class=" ">正常</td>
+
+						</tr>
+					</table>
+
+
+					<!--------分页列表开始-------->
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="p_pagelan">
+						<tbody>
+							<tr>
+								<td class="">
+									<ul class="pagination">
+										<li class="disabled"><span>«</span></li>
+										<li class="active"><span>1</span></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">2</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=3">3</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=4">4</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">»</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('top.html')
+			$('#left').load('dl_left.html')
+			$(".foot").load('footer.html')
+
+			$('.huiyuan_content_title span').click(function() {
+				$(this).addClass('huiyuan_content_title_active').siblings().removeClass('huiyuan_content_title_active')
+			})
+
+
+			$('.filter-box').selectFilter({
+				callBack: function(val) {
+					//返回选择的值
+					console.log(val + '-是返回的值')
+				}
+			});
+			
+			
+			$('.queding').click(function(){
+				
+				var str = [];
+				$("input[name='check']:checked").each(function (index, item) {
+				    str.push($(this).val())
+				});
+				
+				console.log(str)
+			})
+		</script>
+
+
+		<script type="text/javascript">
+			$('#quanxuan').click(function() {
+				var flag = $(this).is(":checked");
+				console.log(flag)
+				$(":checkbox[name='check']").prop("checked", flag);
+			})
+			$('.tab_xuanze').click(function() {
+				var flag = true;
+				var tbodyO = $('.tab_xuanze')
+
+				for (var j = 0; j < tbodyO.length; j++) {
+					//只要存在没被勾选的复选框
+					if (!tbodyO[j].checked) {
+						//判断标识为假，不影响全选框
+						flag = false;
+						break;
+					}
+				}
+				$('#quanxuan').prop("checked", flag)
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_shangpin.png">商品管理
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="huiyuan_content_title">
+						<span class="huiyuan_content_title_active" value="1">全部</span><span value="2">已上架</span><span value="3">已下架</span>
+					</div>
+
+					<div class="chaxun">
+
+						<div class="chaxun_list">
+							<span>供应商：</span>
+							<div class="top_sel gh_gongyingshang">
+								<div class="filter-text">
+									<input class="filter-title" type="text" readonly placeholder="选择供应商" name="gonghuo" />
+									<i class="icon icon-filter-arrow"></i>
+								</div>
+								<select name="filter">
+									<option value="1">供应商1</option>
+									<option value="2">供应商2</option>
+									<option value="3">供应商3</option>
+									<option value="4">供应商4</option>
+
+
+								</select>
+							</div>
+						</div>
+
+						<span>商品名称：</span> <input type="text" name="mingcheng" id="name" value="" />
+						<div class="chaxun_anniu style_bai_14" onclick="chaxun()">查询</div>
+					</div>
+
+
+					<div class="tab_caozuo ">
+						<div style="float:left;  margin-right:1rem;display: flex;align-items: center;" class="table_quanxuan">
+							<input type="checkbox" name="quanxuan" id="quanxuan" style="width:14px; height:14px;"> 全选
+						</div>
+						<div class="filter-box">
+							<div class="filter-text">
+								<input class="filter-title" type="text" readonly placeholder="操作方式" />
+								<i class="icon icon-filter-arrow"></i>
+							</div>
+							<select name="filter">
+								<option value="1">操作1</option>
+								<option value="2">操作2</option>
+								<option value="3">操作3</option>
+
+							</select>
+						</div>
+						<input type="submit" name="Submit2" value="确定操作" class="queding style_bai_14">
+					</div>
+
+
+					<!--------列表开始-------->
+
+					<table width="100%" align="center" ; class="tab_top huiyuan_tab" border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA;">
+							<td height="40" align="center" class="" width="80px">选择 </td>
+							<td align="left" class="" width="60px">排列</td>
+							<td align="left" class="">商品类目</td>
+							<td align="left" class="">商品名称</td>
+							<td align="left" class="">商品金额</td>
+							<td align="left" class="">商品重量</td>
+							<td align="left" class="">商品库存</td>
+							<td align="left" class="">商品状态</td>
+							<td align="center" class="" width="140px">操作</td>
+						</tr>
+
+
+						<tr align="center">
+							<td height="40" class=""><input type="checkbox" name="check" id="id_" class="tab_xuanze" value="1" style="width:14px; height:14px;"></td>
+							<td align="left" class="">1</td>
+							<td align="left" class="">精品服装</td>
+							<td align="left" class="">短袖女</td>
+							<td align="left" class="">0.70</td>
+							<td align="left" class="">0.06kg</td>
+							<td align="left" class="">451120</td>
+							<td align="left" class=" ">已上架</td>
+							<td align="center" class=" shangpin_caozuo"><span  class="shang_list_xiugai">修改</span><span>下架</span><span>删除</span></td>
+						</tr>
+
+					</table>
+
+
+					<!--------分页列表开始-------->
+					<table border="0" align="center" cellpadding="0" cellspacing="0" class="p_pagelan">
+						<tbody>
+							<tr>
+								<td class="">
+									<ul class="pagination">
+										<li class="disabled"><span>«</span></li>
+										<li class="active"><span>1</span></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">2</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=3">3</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=4">4</a></li>
+										<li><a href="/admin/member/huiyuan.html?page=2">»</a></li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+</div>
+
+</div>
+</div>
+
+					<div class="foot"></div>
+
+
+					<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+					<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+					<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+					<script type="text/javascript">
+						$('#top').load('gh_top.html')
+						$('#left').load('gh_left.html')
+						$(".foot").load('footer.html')
+
+						$('.huiyuan_content_title span').click(function() {
+							$(this).addClass('huiyuan_content_title_active').siblings().removeClass('huiyuan_content_title_active')
+						})
+
+
+						$('.filter-box').selectFilter({
+							callBack: function(val) {
+								//返回选择的值
+								console.log(val + '-是返回的值')
+							}
+						});
+
+						$('.gh_gongyingshang').selectFilter({
+							callBack: function(val) {
+								//返回选择的值
+								console.log(val + '-是返回的值')
+							}
+						});
+
+
+						$('.queding').click(function() {
+
+							var str = [];
+							$("input[name='check']:checked").each(function(index, item) {
+								str.push($(this).val())
+							});
+
+							console.log(str)
+						})
+
+
+
+		
+$('body').on('click','.shang_list_xiugai',function(){
+	
+	
+
+	   
+	  
+	
+	
+var html=`	<div class="shang_xiugai">
+		<div class="shang_xiugai_top style_hei_16">
+			<span></span>
+			<span>修改</span>
+			<img src="img/close.png" onclick=" layer.closeAll()">
+		</div>
+	
+		<div class="shang_xiugai_top_bottom ">
+	
+			<div class="shang_xiugai_list">
+				<span>商品类目：</span>
+				<div class="shang_xiugai_leimu top_sel">
+					<div class="filter-text">
+						<input class="filter-title" type="text" readonly placeholder="选择类目"value="" name="leimu" />
+						<i class="icon icon-filter-arrow"></i>
+					</div>
+					<select name="filter">
+						<option value="1">精品女装</option>
+						<option value="2">精品女装2</option>
+						<option value="3">精品女装3</option>
+						<option value="4">精品女装4</option>
+	
+					</select>
+				</div>
+			</div>
+			<div class="shang_xiugai_list">
+				商品名称：<input type="" name="mingcheng"value="" />
+			</div>
+			<div class="shang_xiugai_list">
+				商品金额：<input type="" name="jine" value=""/> &ensp;元
+			</div>
+			<div class="shang_xiugai_list">
+				商品重量：<input type="" name="zhongliang"value="" /> &ensp;kg
+			</div>
+			<div class="shang_xiugai_list">
+				商品库存：<input type="" name="kucun" value=""/>
+			</div>
+	
+			<button type="button" class="style_bai_14" onclick='querenxg()'>确认修改</button>
+		</div>
+	
+	</div>
+	`
+	layer.open({
+		type: 1,
+		title: false,
+		closeBtn: 0,
+		shadeClose: true,
+		skin: 'yourclass',
+		content: html,
+		area:'450px',
+		
+	});
+	$('.shang_xiugai_leimu').selectFilter({
+		callBack: function(val) {
+			//返回选择的值
+			console.log(val + '-是返回的值')
+		}
+	});
+})
+
+						function chaxun() {
+
+							var gonghuoshang = $("input[name='gonghuo']").val()
+							var mingcheng = $("input[name='mingcheng']").val()
+						}
+						
+						function querenxg(){
+							
+							var leimu = $("input[name='leimu']").val()
+							var mingcheng = $("input[name='mingcheng']").val()
+							var jine = $("input[name='jine']").val()
+							var zhongliang = $("input[name='zhongliang']").val()
+							var kucun = $("input[name='kucun']").val()
+							
+							console.log(leimu,mingcheng,jine,zhongliang,kucun)
+							
+						}
+					</script>
+
+
+					<script type="text/javascript">
+						$('#quanxuan').click(function() {
+							var flag = $(this).is(":checked");
+							console.log(flag)
+							$(":checkbox[name='check']").prop("checked", flag);
+						})
+						$('.tab_xuanze').click(function() {
+							var flag = true;
+							var tbodyO = $('.tab_xuanze')
+
+							for (var j = 0; j < tbodyO.length; j++) {
+								//只要存在没被勾选的复选框
+								if (!tbodyO[j].checked) {
+									//判断标识为假，不影响全选框
+									flag = false;
+									break;
+								}
+							}
+							$('#quanxuan').prop("checked", flag)
+						})
+					</script>
+	</body>
+</html>

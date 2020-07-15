@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_fabu.png">发布商品
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="fenzhan">
+						<div class="fenzhan_list">
+							<p><span>商品类目：</span> </p>
+							<div class="filter-box2 top_sel">
+								<div class="filter-text">
+									<input class="filter-title" type="text" readonly placeholder="选择类目" name="leimu" />
+									<i class="icon icon-filter-arrow"></i>
+								</div>
+								<select name="filter">
+									<option value="1">类目1</option>
+									<option value="2">类目2</option>
+									<option value="3">类目3</option>
+									<option value="4">类目4</option>
+									<option value="5">类目5</option>
+								</select>
+							</div>
+						</div>
+						<div class="fenzhan_list mingcheng">
+
+							<p class=""><span>商品名称：</span><input type="text" name="mingcheng" id="" value=""/ placeholder="请输入商品名称"></p>
+						</div>
+						<div class="fenzhan_list peizhi">
+							<p><span>商品价格：</span><input type="text" name="jiage" id="" value="" /></p>
+
+						</div>
+						<div class="fenzhan_list peizhi">
+							<p><span>商品重量：</span><input type="text" name="zhongliang" id="" value="" /></p>
+
+						</div>
+						<div class="fenzhan_list peizhi">
+							<p><span>商品库存：</span><input type="text" name="kuncun" id="" value="" /></p>
+
+						</div>
+						<div class="shenfen_img">
+							<span>商品轮播图：</span>
+
+							<div class="img_zheng">
+
+							<div class="shenfen_zhengmian">
+								<input type="file" name="" id="shenfen_zheng" multiple="multiple" value="" onchange="upload_zheng()" />
+							</div>
+							</div>
+
+
+						</div>
+						<p class="add_tu_tishi style_hui_12">可添加多张图片</p>
+						<div class="fenzhan_list fenzhan_list_youshi">
+							<p><span>备注：</span><textarea rows="" cols=""></textarea></p>
+
+						</div>
+						<div class="fabu_xq">
+							<span>&ensp;&ensp;商品详情：</span>
+
+							<div class="fabu_xq_img">
+
+							<div class="shenfen_zhengfan">
+								<input type="file" name="" id="upload_xq" multiple="multiple" value="" onchange="upload_xq()" />
+							</div>
+							</div>
+
+
+
+						</div>
+						<p class="add_tu_tishi style_hui_12">可添加多张图片</p>
+
+
+						<button type="button" class="fenzhan_shenqing" onclick="fabu()">发布商品</button>
+
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		<!-- <script src="js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+			$('.filter-box2').selectFilter({
+				callBack: function(val) {
+					//返回选择的值
+					console.log(val + '-是返回的值')
+				}
+			});
+
+
+			function upload_zheng() {
+				// $(".img_zheng").text('')
+				var img_cnt = $('.img_zheng img').length; //已上传的数量
+				
+				console.log(img_cnt)
+				var files = $('#shenfen_zheng').get(0).files;
+				img_cnt = img_cnt + files.length
+
+				if (img_cnt > 9) {
+					console.log('9999')
+					alert('最多上传9张图')
+					return false
+				}
+				if (files.length > 0 && files.length <= 9) {
+					for (var i = 0; i < files.length; i++) {
+						var r = new FileReader();
+						r.onload = function() {
+							var tag =
+								`<span class='lunbo_img'> <img class='ossimg' src='${this.result}'  alt=''> <span class='shanchu_lunbo'></span> </span>`
+							$(".shenfen_zhengmian").before(tag)
+						};
+						r.readAsDataURL(files[i]);
+					};
+
+				}
+			}
+
+			function upload_xq() {
+				// $(".img_zheng").text('')
+				var img_cnt = $('.fabu_xq_img img').length; //已上传的数量
+				var files = $('#upload_xq').get(0).files;
+				img_cnt = img_cnt + files.length
+
+				if (img_cnt > 9) {
+					console.log('9999')
+					alert('最多上传9张图')
+					return false
+				}
+				if (files.length > 0 && files.length <= 9) {
+					for (var i = 0; i < files.length; i++) {
+						var r = new FileReader();
+						r.onload = function() {
+							var tag =
+								`<span class='xq_img'> <img class='ossimg' src='${this.result}'  alt=''> <span class='shanchu_xq'></span> </span>`
+							$(".shenfen_zhengfan").before(tag)
+						};
+						r.readAsDataURL(files[i]);
+					};
+
+				}
+			}
+			$('body').on('click', '.shanchu_lunbo', function() {
+
+
+				$(this).parents('.lunbo_img').remove()
+
+			})
+			$('body').on('click', '.shanchu_xq', function() {
+
+
+				$(this).parents('.xq_img').remove()
+
+			})
+			function fabu() {
+
+				var leimu = $("input[name='leimu']").val()
+				var mingcheng = $("input[name='mingcheng']").val()
+				var jiage = $("input[name='jiage']").val()
+				var zhongliang = $("input[name='zhongliang']").val()
+				var kuncun = $("input[name='kuncun']").val()
+				var beizhu = $("textarea").val()
+				console.log(leimu)
+
+
+
+
+
+			}
+		</script>
+
+
+		<script type="text/javascript">
+
+
+		</script>
+	</body>
+</html>

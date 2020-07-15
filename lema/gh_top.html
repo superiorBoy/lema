@@ -1,0 +1,52 @@
+<div class="top ">
+	<div class="zongkuan">
+		<div class="top_title content">
+			<p> <a href="#"><img src="img/top_help.png">帮助中心 </a> <a href="about.html"> <img src="img/top_guanyu.png">关于我们 </a></p>
+
+			<p class="denglu_xianshi_top"><a href="gh_login.html">登录</a>  </p>
+			<!-- 用户已登陆 -->
+			<p class=" yidenglu_top"><span>张先生</span><span>普通商家</span> <a href="#"> <img src="img/tuichu.png"> <span>退出</span></a></p>
+
+		</div>
+	</div>
+
+	<div class="top_center content">
+		
+		<div class="top_center_l">
+			
+		
+		<img src="img/top_login.png">
+		<div class="top_center_left">
+			<p>一站式企业服务平台</p>
+			<p>免费帮您搭建网站</p>
+		</div>
+</div>
+
+<!-- 非登录页面显示 -->
+<a href="index.html"><p>返回首页</p></a>
+
+<!-- 登录页面显示 -->
+<!-- <p class="gh_login_top"><a href="index.html">返回首页</a><a href="javascript:void(0);">供货商中心</a><a href="javascript:void(0);">供货商帮助</a><a href="javascript:void(0);">供货商公告</a><a href="javascript:void(0);">关于我们</a></p> -->
+
+
+
+	</div>
+</div>
+<script type="text/javascript">
+
+	$(document).ready(function () {
+	
+	    $(".top_tab_left a").each(function () {
+	
+	        $this = $(this);
+	   console.log($this)
+	        if ($this[0].href == String(window.location)) {
+	
+	            $this.find('span').addClass("top_tab_active");
+	
+	        }
+	
+	    });
+	
+	});
+</script>

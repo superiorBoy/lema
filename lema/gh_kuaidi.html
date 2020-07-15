@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<style type="text/css">
+			.bottom{
+				padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_kuaidi.png">快递模板
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="kuaidi_top">
+						<div class="kuaidi_top_title active_hong">
+							新增收货地址
+						</div>
+						<p><span>*</span>收&ensp;件&ensp;人：<input type="text" name="people" id="" value="" maxlength="25" placeholder="长度不超过25个字符" /></p>
+
+						<p><span>*</span>联系电话：<input type="num" name="phone" id="" value="" placeholder="" /></p>
+						<div class="shuru_dizhi"><span class="dizhi_span">*</span>地址信息：
+							<form class="form-inline">
+								<div id="distpicker">
+									<div class="form-group">
+										<div style="position: relative;">
+											<input id="city-picker3" class="form-control" readonly type="text" value="选择省/市/区" data-toggle="city-picker" name="shengshiqu">
+										</div>
+										<img src="img/xia.png">
+									</div>
+
+								</div>
+							</form>
+						</div>
+
+						<p class="xx_dizhi"><span>*</span>详细地址：<textarea rows="" cols="" placeholder="请输入详细地址信息，如道路/门牌号/小区/楼栋号/单元信息"></textarea></p>
+						<p class="xx_dizhi_tishi">注意：如遇东莞市、中山市、天门市、三沙市、儋州市、嘉峪关市等没有区的城市，区域可设置为“其他区”</p>
+
+						<button type="button" onclick="baocun()">保存</button>
+					</div>
+
+
+
+					<!--------列表开始-------->
+					<div class="kuaidi_xinxi">
+						<img src="img/gonghuo/kuaidi_tishi.png">
+						<p>已保存6条地址，还能保存14条地址</p>
+					</div>
+
+
+
+					<table width="100%" align="center" ; class="tab_top kuaidi_tab" border="0" cellspacing="0" cellpadding="0">
+
+						<tr style="background-color: #FAFAFA;" class="kuaidi_tab_top">
+
+							<td align="left" class="" width="100px">收件人</td>
+							<td align="left" class="" width="120px">电话</td>
+							<td align="left" class="" width="230px">所在地区</td>
+							<td align="left" class="" width="430px">详细地址</td>
+							<td align="left" class="" height="95px">操作</td>
+
+						</tr>
+
+
+						<tr align="left">
+							<td  class="">欧阳大侠</td>
+							<td  class="">17011212200</td>
+							<td  class="">浙江省杭州市江干区凯旋街道</td>
+							<td  class="">杭州市江干区彭埠街道明月桥路1号</td>
+							<td  class="kuaidi_caozuo"><span>修改</span>&ensp; | &ensp;<span>删除</span></td>
+						</tr>
+						<tr align="left">
+							<td  class="">欧阳大侠</td>
+							<td  class="">17011212200</td>
+							<td  class="">浙江省杭州市江干区凯旋街道</td>
+							<td  class="">杭州市江干区彭埠街道明月桥路1号</td>
+							<td  class="kuaidi_caozuo"><span>修改</span>&ensp; | &ensp;<span>删除</span></td>
+						</tr>
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city-picker.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city-picker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+
+		function baocun(){
+			var shoujianren = $("input[name='people']").val()
+			var phone = $("input[name='phone']").val()
+		var sheng=	$('.select-item').eq(0).text()
+		var shi=	$('.select-item').eq(1).text()
+		var qu=	$('.select-item').eq(2).text()
+		var xiangxi = $("textarea").val()
+			console.log(shoujianren,phone,sheng,shi,qu,xiangxi)
+		}
+		</script>
+
+
+		<script type="text/javascript">
+
+		</script>
+	</body>
+</html>

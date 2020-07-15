@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_shenqing.png">申请供货商
+				</div>
+
+				<div class="bottom">
+
+               <div class="shenqing_title">
+               	
+               	<div class="shenqing_title_top">
+               		<p class="shenqing_title_top_active">1</p><span class="dierbu_span"></span>
+					<p class="dierbu">2</p><span  class="disanbu_span" ></span>
+					<p class="disanbu">3</p><span  class="disibu_span"></span>
+					<p class="disibu">4</p>
+               	</div>
+				<div class="shenqing_title_bottom">
+				<span class="active_hong">填写申请资料&nbsp;</span>
+				<span class="dierbu_txt">等待审核&nbsp; &nbsp; &nbsp; &nbsp; </span>  
+				<span class="disanbu_txt" >审核通过&nbsp;</span>
+				<span class="disibu_txt" >缴纳保证金&nbsp; &nbsp; </span>
+				</div>
+               </div>
+
+	
+
+<!-- 第一步 -->
+	
+	
+	
+
+	
+    <div class="fenzhan">
+		<div class="shenqing_leibie">
+		    <p><span>入驻类别：</span></p>
+			
+			<p><input type="radio" name="leibie" id="" value="1"checked="checked" />代发团队入驻</p>
+		    <p><input type="radio" name="leibie" id="" value="2" />专业市场入驻</p>
+			<p><input type="radio" name="leibie" id="" value="3" />源头工厂入驻</p>
+			<p><input type="radio" name="leibie" id="" value="4" />品牌商入驻</p>
+		</div>
+        <div class="fenzhan_list">
+            <p><span  class="mingcheng_leibie">团队名称：</span><input type="text" name="mingcheng" id="" value=""/></p>
+            
+        </div>
+		
+		
+		<!-- 品牌商入驻 -->
+		<div class="shenfen_img shangjia_shenqing">
+			<span class="shenqing_zhengshu_txt">品牌证书：</span>
+		
+			<div class="img_zheng">
+		
+			</div>
+			<div class="shenfen_zhengmian">
+				<input type="file" name="" id="shenfen_zheng" value="" onchange="upload_zheng()" />
+			</div>
+		
+		</div>
+		<!-- --end -->
+		
+		<div class="fenzhan_list shenqing_dizhi">
+		    
+		    <p class=""><span>发货地址：</span><input type="text" name="dizhi" id="" value=""/></p>
+		</div>
+        <div class="fenzhan_list">
+            <p><span>公司名称：</span><input type="text" name="gongsiname" id="" value=""/></p>
+            
+        </div>
+		<div class="fenzhan_list shenqing_wangzhi">
+		    <p><span>店铺网址：</span><input type="text" name="wangzhi" id="" value=""/></p>
+		    
+		</div>
+		<div class="fenzhan_list shenqing_duan">
+		    
+		    <p><span>联系人：</span><input type="text" name="lianxiren" id="" value=""/></p>
+		</div>
+        <div class="fenzhan_list ">
+            <p><span>身份证号：</span><input type="text" name="shenfennum" id="" value=""/></p>
+        </div>
+		<div class="fenzhan_list shenqing_duan">
+		    
+		    <p><span>联系电话：</span><input type="text" name="phone" id="" value=""/></p>
+		</div>
+
+        <div class="fenzhan_list shenqing_duan">
+            <p><span>联系QQ：</span><input type="text" name="qq" id="" value=""/></p>
+            
+        </div>
+		<div class="fenzhan_list shenqing_duan">
+		    
+		    <p><span>联系微信：</span><input type="text" name="weixin" id="" value=""/></p>
+		</div>
+        <div class="fenzhan_list fenzhan_list_youshi">
+            <p><span>申请优势：</span><textarea rows="" cols=""></textarea></p>
+
+        </div>
+
+
+        <button type="button" class="fenzhan_shenqing" onclick="shenqing()">提交申请</button>
+
+    </div>
+
+<!-- 第二步 -->
+
+<div class="shenhe style_hei_14">
+	<img src="img/dai_shenhe.png" >
+	<p class="style_hei_14_bold">您提交的申请正在审核中！</p>
+	<p>审核时间需要2个工作日，请保留您的账户</p>
+	<p>您也可以在【供货商中心】—【账户管理】—【<span class="style_hong_14">账户资料</span>】中查看进度！</p>
+</div>
+<!-- 第三步 -->
+
+
+<!-- 审核通过 -->
+<div class="sanbu_tongguo style_hei_14">
+	<img src="img/shenhe_tongguo.png" >
+	<p class="style_hei_14_bold">恭喜~您提交的审核已通过~！</p>
+	<p>为了更好的体验，对代理模式管理，请您缴纳保证金</p>
+	<p>请前去缴纳保证金【<span class="style_hong_14">缴纳保证金</span>】</p>
+</div>
+<!-- 审核失败 -->
+<div class="sanbu_shibai style_hei_14">
+	<img src="img/shenhe_shibai.png" >
+	<p class="style_hei_14_bold">嗷~您提交的审核未通过验证~</p>
+	<p>为了提高审核通过率，请您认真填写申请资料</p>
+	<p>返回申请界面重新填写【<span class="style_hong_14">申请供货商</span>】</p>
+</div>
+
+
+<!-- 第四步 -->
+       	<div class="sibu">
+       		<!--    <p class="shenhe_user"><span>{$user['nickname']}</span>,您当前是{if $user['istuanzhang'] ==2}<span>普通会员</span>{else}<span>vip</span>{/if}</p>
+       <div class="leixing">
+           <span class="style_hui_14">服务类型</span>
+           <p class="leixing_active">普通会员</p>
+           <p>VIP会员</p>
+       </div>
+       <div class="zhouqi">
+           <span class="style_hui_14">购买周期</span>
+           <p class="zhouqi_active">月费</p>
+           <p>季度费</p>
+           <p>季度费</p>
+           <p>季度费</p>
+           <p>季度费</p>
+       </div> -->
+       		<p class="sibu_yifu_jine">当前已缴纳保证金 <span>0 </span> 元</p>
+       		<p class="shenhe_jine">应付金额：<span class="style_hong_20">3000元</span></p>
+       
+       		<button type="button" class="style_bai_14">立即支付</button>
+       		<p class="style_hui_12 sibu_tishi">提醒：保证金对买家来说，是一种进货信任和保障的象征让买家买的放心！保证金的金额越高，买家对其的信任度更高。</p>
+       	</div>
+
+
+
+
+            <!-- 已支付保证金显示 -->
+
+            <div class="yijiaofei style_hei_14">
+                <img src="img/gonghuo/yijiaona.png" >
+                <p class="">哇~您已成功入驻供货商~</p>
+                <p>去了解一下各种模块的内容吧，先从发货设置入手吧~</p>
+                <p>前往设置【<span class="style_hong_14">发货地址</span>】吧</p>
+				<p class="yijiaofei_yijiaona">当前已缴纳保证金<span>1000</span>元</p>
+				<button type="button" class="style_bai_14">解冻保证金</button>
+            </div>
+            
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		<!-- <script src="js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+
+
+$('input[name="leibie"]').change(function() {
+	$('.shangjia_shenqing').hide()
+	console.log($(this).val())
+	var val =$(this).val()
+	if(val==1){
+		$('.mingcheng_leibie').text('团队名称：')
+	}else if(val==2){
+		
+		$('.mingcheng_leibie').text('实体店名称：')
+		
+	}else if(val==3){
+		$('.mingcheng_leibie').text('工厂名称：')
+	}else if(val==4){
+		$('.mingcheng_leibie').text('品牌名称：')
+		$('.shangjia_shenqing').css('display','flex')
+	}
+	
+})
+
+			function upload_zheng() {
+				$(".img_zheng").text(' ')
+				// var img_cnt = $('.img_zheng img').length; //已上传的数量
+				
+				// console.log(img_cnt)
+				var files = $('#shenfen_zheng').get(0).files;
+				// img_cnt = img_cnt + files.length
+
+				// if (img_cnt > 9) {
+				// 	console.log('9999')
+				// 	alert('最多上传9张图')
+				// 	return false
+				// }
+				// if (files.length > 0 && files.length <= 9) {
+					for (var i = 0; i < files.length; i++) {
+						var r = new FileReader();
+						r.onload = function() {
+							var tag =
+								`<span class='lunbo_img'> <img class='ossimg' src='${this.result}'  alt=''>  </span>`
+							$(".img_zheng").append(tag)
+						};
+						r.readAsDataURL(files[i]);
+					};
+
+				// }
+			}
+
+
+function shenqing() {
+
+var leixing=$('input[name="leibie"]:checked').val()
+
+
+        var mingcheng = $("input[name='mingcheng']").val()
+        var dizhi = $("input[name='dizhi']").val()
+        var gongsiname = $("input[name='gongsiname']").val()
+        var wangzhi = $("input[name='wangzhi']").val()
+		var lianxiren = $("input[name='lianxiren']").val()
+        var shenfennum = $("input[name='shenfennum']").val()
+        var phone = $("input[name='phone']").val()
+        var qq = $("input[name='qq']").val()
+        var weixin = $("input[name='weixin']").val()
+        var youshi = $("textarea").val()
+        console.log(youshi,leixing)
+
+
+
+$('.fenzhan').hide()
+$('.shenhe').show()
+$('.dierbu').addClass('shenqing_title_top_active')
+
+$('.dierbu_span').addClass('shenqing_title_top_span')
+
+
+
+
+
+
+    }
+
+
+
+
+$('.leixing p').click(function(){
+	
+	$(this).addClass('leixing_active').siblings().removeClass('leixing_active')
+	
+})
+$('.zhouqi p').click(function(){
+	
+	$(this).addClass('zhouqi_active').siblings().removeClass('zhouqi_active')
+	
+})
+
+
+
+
+
+		</script>
+
+
+		<script type="text/javascript">
+			
+			
+			// 第二步
+			
+			// $('.dierbu').addClass('shenqing_title_top_active')
+			// $('.dierbu_txt').addClass('active_hong')
+			// $('.dierbu_span').addClass('shenqing_title_top_span')
+			// $('.shenqing_title_bottom span')
+			// 第三步
+			
+			// $('.dierbu').addClass('shenqing_title_top_active')
+			// $('.disanbu').addClass('shenqing_title_top_active')
+			// $('.dierbu_span').addClass('shenqing_title_top_span')
+			// $('.disanbu_span').addClass('shenqing_title_top_span')
+			// $('.dierbu_txt').addClass('active_hong')
+			// $('.disanbu_txt').addClass('active_hong')
+			// 第四步
+			
+			// $('.dierbu').addClass('shenqing_title_top_active')
+			// $('.disanbu').addClass('shenqing_title_top_active')
+			// $('.disibu').addClass('shenqing_title_top_active')
+			// $('.dierbu_span').addClass('shenqing_title_top_span')
+			// $('.disanbu_span').addClass('shenqing_title_top_span')
+			// $('.disibu_span').addClass('shenqing_title_top_span')
+			// $('.dierbu_txt').addClass('active_hong')
+			// $('.disanbu_txt').addClass('active_hong')
+			// $('.disibu_txt').addClass('active_hong')
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/to.css" />
+		<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+		<link rel="stylesheet" type="text/css" href="css/lema.css" />
+		<link rel="stylesheet" type="text/css" href="css/gonghuo.css" />
+		<link rel="stylesheet" type="text/css" href="css/tp_page.css" />
+	</head>
+	<body>
+		<div id="top"></div>
+
+
+		<div class="body content">
+			<div id="left"></div>
+
+			<div class="right">
+
+				<div class="liebie_title style_hei_16">
+					<img src="img/gonghuo/gh_shezhi.png">发货设置
+				</div>
+
+				<div class="bottom">
+
+
+					<div class="fenzhan">
+						<div class="fenzhan_list shezhi_shijian">
+							<p><span>下单时间：</span><input type="text" name="time" id="" value="" /></p>
+
+						</div>
+						<div class="fenzhan_list shezhi_mingcheng">
+
+							<p class=""><span>代发名称：</span><input type="text" name="mingcheng" id="" value=""/ placeholder=""></p>
+						</div>
+						<div class="fenzhan_list fahuo_dizhi">
+							<p><span>发货地址：</span>	</p>
+							<input type="text" name="sheng" id="" value="" />  &ensp;省&ensp;&ensp;
+							<input type="text" name="shi" id="" value="" />&ensp;市&ensp;&ensp;
+							<input type="text" name="qu" id="" value="" />&ensp;区
+						
+						
+						</div>
+						<div class="fenzhan_list shezhi_dizhi">
+							<p><span>详细地址：</span><input type="text" name="dizhi" id="" value="" /></p>
+
+						</div>
+						<div class="fenzhan_list shezhi_kuaidi">
+							<p><span>快递费：</span><input type="text" name="kuaidi" id="" value="" /></p>
+
+						</div>
+
+						<div class="fenzhan_list fenzhan_list_youshi shezhi_beizhu">
+							<p><span>备注：</span><textarea rows="" cols=""></textarea></p>
+
+						</div>
+
+
+
+
+						<button type="button" class="fenzhan_shenqing fahuo_shezhi" onclick="tijiao()">发货设置</button>
+
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="foot"></div>
+
+		<!-- <script src="js/layui.all.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/selectFilter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#top').load('gh_top.html')
+			$('#left').load('gh_left.html')
+			$(".foot").load('footer.html')
+
+
+			function tijiao() {
+
+				var time = $("input[name='time']").val()
+				var mingcheng = $("input[name='mingcheng']").val()
+				var sheng = $("input[name='sheng']").val()
+				var shi = $("input[name='shi']").val()
+				var qu = $("input[name='qu']").val()
+				var dizhi = $("input[name='dizhi']").val()
+				var kuaidi = $("input[name='kuaidi']").val()
+				var beizhu = $("textarea").val()
+				console.log(beizhu)
+
+
+
+
+
+			}
+		</script>
+
+
+		<script type="text/javascript">
+
+
+		</script>
+	</body>
+</html>
